@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center bg-background">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 tracking-tight text-primary">
           Frontend Flipper
