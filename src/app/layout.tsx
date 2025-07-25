@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Frontend Flipper',
+  title: 'Frontend Flipper_2',
   description: 'A simple app to flip themes and messages.',
 };
 

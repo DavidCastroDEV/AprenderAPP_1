@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 
 export default function Home() {
   const [welcomeMessage, setWelcomeMessage] = useState(
-    "Welcome to Frontend Flipper!"
+    "Welcome to Frontend Flipper_2!"
   );
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -37,7 +37,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center bg-background">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 tracking-tight text-primary">
-          Frontend Flipper
+          Frontend Flipper_2
         </h1>
         <p className="text-lg md:text-xl text-foreground/80 mb-12">
           {welcomeMessage}
