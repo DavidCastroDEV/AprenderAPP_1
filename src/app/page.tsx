@@ -8,7 +8,7 @@ import { Loader2 } from "lucide-react";
 
 // Aquí puedes agregar o cambiar tus frases
 const welcomeMessages = [
-  "Welcome to Frontend Flipper_2!",
+  "Welcome to Frontend Flipper!",
   "Discover a new look with every click.",
   "Your interface, reimagined.",
   "Hello, world! Ready for a change?",
@@ -37,7 +37,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center bg-background">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 tracking-tight text-primary">
-          Frontend Flipper_2
+          Frontend Flipper
         </h1>
         <p className="text-lg md:text-xl text-foreground/80 mb-12">
           {welcomeMessage}
