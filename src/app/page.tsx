@@ -3,34 +3,34 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { regenerateWelcomeMessage } from "@/ai/flows/regenerate-welcome-message";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 
+// Aquí puedes agregar o cambiar tus frases
+const welcomeMessages = [
+  "Welcome to Frontend Flipper_2!",
+  "Discover a new look with every click.",
+  "Your interface, reimagined.",
+  "Hello, world! Ready for a change?",
+  "Press the button to see the magic."
+];
+
 export default function Home() {
-  const [welcomeMessage, setWelcomeMessage] = useState(
-    "Welcome to Frontend Flipper_2!"
-  );
+  const [welcomeMessage, setWelcomeMessage] = useState(welcomeMessages[0]);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleRegenerate = async () => {
-    setIsLoading(true);
-    try {
-      const result = await regenerateWelcomeMessage({
-        currentMessage: welcomeMessage,
-      });
-      setWelcomeMessage(result.newMessage);
-    } catch (error) {
-      console.error("Failed to regenerate message:", error);
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Could not generate a new message. Please try again.",
-      });
-    } finally {
-      setIsLoading(false);
+  const handleRegenerate = () => {
+    // Lógica para seleccionar un mensaje aleatorio de la lista
+    const randomIndex = Math.floor(Math.random() * welcomeMessages.length);
+    let newMessage = welcomeMessages[randomIndex];
+
+    // Asegurarnos de que no se repita el mismo mensaje
+    if (newMessage === welcomeMessage) {
+      newMessage = welcomeMessages[(randomIndex + 1) % welcomeMessages.length];
     }
+    
+    setWelcomeMessage(newMessage);
   };
 
   return (
